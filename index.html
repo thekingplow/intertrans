@@ -1,11 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>ИнтерТранс</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="image/delivery.png" type="image/png">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<script src="https://kit.fontawesome.com/f2e07d91ee.js" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<p><Привет/p>
+
+	<!-- ПРЕЛОАДЕР -->
+
+	<div class="preloader">
+		<div class="truck-wrapper">
+			<div class="truck">
+				<div class="truck-container"></div>
+				<div class="glases"></div>
+				<div class="bonet"></div>
+				<div class="base"></div>
+				<div class="base-aux"></div>
+				<div class="wheel-back"></div>
+				<div class="wheel-front"></div>
+				<div class="smoke"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ПРЕЛОАДЕР -->
+
+
+	<!-- НАЧАЛО МЕНЮ-->
+
+	<div class="header">
+		<div class="container-header">
+			<div class="logo">
+				<a href="#"><img src="image/logo.png"  alt="логотип" /></a>
+			</div>
+			<input class="switcher" type="checkbox" id="menu">
+			<label class="open-close" for="menu">
+				<i class="fas fa-bars"></i>
+			</label>
+			<div class="nav">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#anchor-service">Услуги</a></li>
+					<li><a href="#anchor-advantages">Преимущества</a></li>
+					<li><a href="#anchor-about">О нас</a></li>
+					<li><a href="сontacts.html">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- КОНЕЦ МЕНЮ -->
+
+
+	<!-- НАЧАЛО ЗАГАЛОВКА АНИМАЦИИ -->
+
+	<div class="conteiner-title">
+		<span class="text1">Международные грузоперевозки</span>
+		<span class="text2">Доставка грузов из Европы и Азии в СНГ</span>
+	</div>
+
+	<!-- КОНЕЦ ЗАГАЛОВКА АНИМАЦИИ -->
+
+
+	<!-- НАЧАЛО СЛАЙДЕРА -->
+	<div id="slider">
+		<input type="radio" name="slider" id="slide1" checked>
+		<input type="radio" name="slider" id="slide2">
+		<input type="radio" name="slider" id="slide3">
+		<div id="slides">
+			<div id="overflow">
+				<div class="inner">
+					<div class="slide slide_1">
+						<div class="slide-content">
+							<img src="image/bg-slide1.png" alt="слайд-1">
+							<p class="slide-content-text slide-text-1">Перевозки фурой</p>
+						</div>
+					</div>
+					<div class="slide slide_2">
+						<div class="slide-content">
+							<img src="image/bg-slide2.png" alt="слайд-2">
+							<p class="slide-content-text slide-text-2">Перевозки сборных грузов</p>
+						</div>
+					</div>
+					<div class="slide slide_3">
+						<div class="slide-content">
+							<img src="image/bg-slide3.png" alt="слайд-3">
+							<p class="slide-content-text slide-text-3">Перевозки негабаритных грузов</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="controls">
+			<label for="slide1"></label>
+			<label for="slide2"></label>
+			<label for="slide3"></label>
+		</div>
+		<div id="bullets">
+			<label for="slide1"></label>
+			<label for="slide2"></label>
+			<label for="slide3"></label>
+		</div>
+	</div>
+
+	<!-- КОНЕЦ СЛАЙДЕРА -->
+
+
+	<!-- НАЧАЛО БЛОКА УСЛУГИ -->
+
+	<div class="s-content" id="anchor-service">
+		<div class="container-services">
+			<h2>Наши услуги</h2>
+			<div class="services">
+				<div class="block-img">
+					<img src="image/ser1.jpg" alt="Перевозка фурой">
+					<span class="descr-short">Доставка грузов из Европы и Азии в СНГ. Возим грузы — от 100 килограмм</span>
+					
+					<a href="#popup" class="btn-img">Рассчитать</a>
+					<div id="popup" class="popup">
+						<h2>Звонок</h2>
+						<form action="" id="dateform">
+							<p>
+								<label for="name">
+									ФИО
+									<br>
+									<input type="text" id="name">
+								</label>
+							</p>
+							<label for="tel">
+								Номер телефона
+								<br>
+								<input type="text" id="tel" maxlength="13">
+							</label>
+						</p>
+						<p>
+							<label for="message">
+								Информация
+								<br>
+								<textarea name="text" id="message"></textarea>
+							</label>
+						</p>
+						<p><button type="reset">Отправить</button>
+							<a href="#" class="close-pop">Отмена</a>
+						</p> 
+					</form>
+				</div>
+					<a href="#" class="close-popup"></a>
+				</div>
+				<p class="services-title" >Перевозка фурой</p>
+				<p class="descr-full">Автомобили (цельнометаллические, тентованные)  с боковой, верхней или задней загрузкой, грузоподъемностью 20 тонн и более идеально подойдет тем, кто хочет перевезти на близкие и дальние расстояния большой объем товаров самых разных категорий. Поможем Вам перевезти: не скоропортящиеся продукты питания (в наличии санитарные книжки), промышленные товары, товары народного потребления, офисную и домашнюю мебель, строительные материалы, промышленные станки и агрегаты, и прочие товары народного потребления.</p>
+			</div>
+			<div class="services">
+				<div class="block-img">
+					<img src="image/ser2.jpg" alt="Рефрижераторные перевозки">
+					<span class="descr-short">Перевозки продуктов питания с поддержанием температуры груза -25С + 25С. Оснащены термпописцами, крюками для перевозки полутуш</span>
+					<a href="#popup" class="btn-img">Рассчитать</a>
+					<div id="popup" class="popup">
+						<h2>Звонок</h2>
+						<form action="" id="dateform">
+							<p>
+								<label for="name">
+									ФИО
+									<br>
+									<input type="text" id="name">
+								</label>
+							</p>
+							<label for="tel">
+								Номер телефона
+								<br>
+								<input type="text" id="tel" maxlength="13">
+							</label>
+						</p>
+						<p>
+							<label for="message">
+								Информация
+								<br>
+								<textarea name="text" id="message"></textarea>
+							</label>
+						</p>
+						<p><button type="reset">Отправить</button>
+							<a href="#" class="close-pop">Отмена</a>
+						</p> 
+					</form>
+				</div>
+					<a href="#" class="close-popup"></a>
+				</div>
+				<p class="services-title">Рефрижераторные перевозки</p>
+				<p class="descr-full" >Для сохранения температурного режима (-25°С до +25°С) при транспортировке груза мы используем холодильные установки, оснащенные записывающими устройствами (самописцы), которые позволяют отслеживать температуру в фургоне рефрижератора. Мы можем перевозить: пищевую группу товаров:(мясо, рыба, консервы, молочные продукты, кондитерские изделия,сыр, колбасы, овощи, фрукты) перевозки замороженных концентратов; медикаменты; химическую продукцию и многое другое.</p>
+			</div>
+			<div class="services" style="margin-right: 0;">
+				<div class="block-img">
+					<img src="image/ser3.jpg" alt="Сборные грузы">
+					<span class="descr-short">Доставка небольших товаров от 10 кг в составе сборного груза. Экономия стоимости до 30%.</span>
+					<a href="#popup" class="btn-img">Рассчитать</a>
+					<div id="popup" class="popup">
+						<h2>Звонок</h2>
+						<form action="" id="dateform">
+							<p>
+								<label for="name">
+									ФИО
+									<br>
+									<input type="text" id="name">
+								</label>
+							</p>
+							<label for="tel">
+								Номер телефона
+								<br>
+								<input type="text" id="tel" maxlength="13">
+							</label>
+						</p>
+						<p>
+							<label for="message">
+								Информация
+								<br>
+								<textarea name="text" id="message"></textarea>
+							</label>
+						</p>
+						<p><button type="reset">Отправить</button>
+							<a href="#" class="close-pop">Отмена</a>
+						</p> 
+					</form>
+				</div>
+					<a href="#" class="close-popup"></a>
+				</div>
+				<p class="services-title">Сборные грузы</p>
+				<p class="descr-full">Такой способ доставки позволяет отправить небольшой объем товара по адекватной стоимости, ведь получатель делит расходы на доставку с другими грузовладельцами. Сборные грузоперевозки предполагают оплату только фактически занятого пространства. Ежедневные отправки от 1кг до 20т. Доставка от 12 до 24 часов.</p>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- КОНЕЦ БЛОКА УСЛУГИ -->
+
+
+	<!-- НАЧАЛО БЛОКА ПРЕИМУЩЕСТВА -->
+	
+	<div class="a-content" id="anchor-advantages">
+		<div class="container-advantages">
+			<h2>Нас выбирают</h2>
+			<div  class="advantages">
+				<img src="image/price.png" alt="цена">
+				<p class="advantages-text-title">Адекватные цены</p>
+				<p class="advantages-text">Отлаженный рабочий процесс позволяют сделать тарифы на 10% ниже, чем у конкурентов</p>
+			</div>
+			<div class="advantages">
+				<img src="image/hour.png" alt="время">
+				<p class="advantages-text-title">Круглосуточно 24/7</p>
+				<p class="advantages-text">Мы ценим время наших клиентов, поэтому мы всегда на месте в нужное время</p>
+			</div>
+			<div class="advantages">
+				<img src="image/distance.png" alt="растояние">
+				<p class="advantages-text-title">Работаем по всей РБ</p>
+				<p class="advantages-text">Работаем не только в Минске, но и доставляем грузы по всей Беларуси точно в срок</p>
+			</div>
+			<div class="advantages">
+				<img src="image/quality.png" alt="качество">
+				<p class="advantages-text-title">Работаем с юрлицами</p>
+				<p class="advantages-text">Мы работаем официально, принимаем оплату наличным, безнал, предоставляем акты</p>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- КОНЕЦ БЛОКА ПРЕИМУЩЕСТВА -->
+
+
+	<!-- НАЧАЛО БЛОКА О НАС -->
+
+	<div class="ab-content" id="anchor-about">
+		<div class="about-container">
+			<h2>О нас</h2>
+			<div class="about">
+				<p>ООО «ИнтерТранс» успешно оказывает полный комплекс услуг по перевозке грузов с 2008 года. За это время мы успели создать отлаженную систему взаимодействия между собственниками подвижного состава и владельцами грузов. Наша база насчитывает более 1000 договоров с контрагентами по всей Беларуси и ближнего зарубежья, что позволяет подобрать нужный транспорт с гарантией качества, надежности и точно в срок.</p>
+				<p>Основной специализацией компании является организация перевозок грузов на автомобильном транспорте. География грузопотоков обширна в направлении Беларусь-Россия-Беларусь. Мы осуществляем перевозку отдельными транспортными средствами, так же сборных грузов. Подвижной состав самый разнообразный - тентованный, рефрижераторный, бортовой, площадки, малотоннажный транспорт.</p>
+				<p>Специалисты нашей компании готовы предоставить всю необходимую информацию для Вас:</p>
+				<ul class="list6b">
+					<li>расчет ставки за перевозку в кратчайшие сроки</li>
+					<li>консультации по законодательству и оптимизации платежей</li>
+					<li>контроль за движением транспорта</li>
+				</ul>
+				<p>Успех каждой перевозки зависит от грамотного планирования, поэтому для каждого груза мы подбираем наиболее подходящий транспорт, и оптимальный маршрут.</p>
+			</div>
+			<div class="about" style="line-height: 400px"><img src="image/logo-about.jpg" alt="логотип-большой"></div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- КОНЕЦ БЛОКА О НАС -->
+
+	
+	<!-- НАЧАЛО БЛОКА КАРТЫ -->
+
+	<div class="map">
+		<div class="map-contact">
+			<h2>Контакты</h2>
+			<p>ООО «ИнтерТранс»</p>
+			<p>ул. Киселева 25, 220034 Минск, Беларусь</p>
+			<p><span>Тел.: (BY) </span><a href="tel:+375 29 183 62 04"> +375 29 183 62 04</a></p>
+			<p><span>Тел.: (RU) </span><a href="tel:+7 495 5540 537"> +7 495 5540 537</a></p>
+			<p><span>Email: </span><a href="mailto:mdanilov1@yandex.ru">mdanilov1@yandex.ru</a></p>
+		</div>
+		<p class="map-text">Адрес на карте</p>
+		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A390eb53e1c493d5786f0e2dfd6016442aeda2eb31fbaa3646b0be5d34329ad7c&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+	</div>
+	
+	<!-- КОНЕЦ БЛОКА КАРТЫ -->
+
+
+	<!-- НАЧАЛО БЛОКА ФУТЕРА -->
+	
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="copyright">
+				<span style="color: #F5FFFA">© 2020 ООО ИнтерТранс</span>
+			</div>
+			<div class="social">
+				<ul>
+					<li><a target="_blank" href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+					<li><a target="_blank" href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a></li>
+					<li><a target="_blank" href="https://vk.com/" class="vk"><i class="fab fa-vk"></i></a></li>
+					<li><a target="_blank" href="https://www.whatsapp.com/" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+					<li><a target="_blank" href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a></li>
+				</ul>
+			</div>
+			<div class="footer-link">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#anchor-service">Услуги</a></li>
+					<li><a href="#anchor-advantages">Преимущества</a></li>
+					<li><a href="#anchor-about">О нас</a></li>
+					<li><a href="сontacts.html">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- КОНЕЦ БЛОКА ФУТЕРА -->
+
+
+	<!-- НАЧАЛО ЯКОРЯ (КНОПКА-НАВЕРХ) -->
+
+	<div class="block-arrow">
+		<a href="#" class="arrowUp">
+			<i class="fas fa-arrow-up"></i>
+		</a>
+	</div>
+
+	<!-- КОНЕЦ ЯКОРЯ (КНОПКА-НАВЕРХ) -->
+
+
+
+
+	<script>
+		$(window).on('load', function(){
+			$('.preloader').delay(1100).fadeOut('slow');
+		});
+	</script>
 </body>
 </html>
